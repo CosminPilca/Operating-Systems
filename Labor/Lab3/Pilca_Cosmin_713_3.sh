@@ -2,7 +2,7 @@
 
 
 if [ $# -ne 1 ]; then
-    echo "Verwendung: $0 <Ordnerpfad>"
+    echo "Verwendung: $0 <folder_path>"
     exit 1
 fi
 
@@ -18,7 +18,7 @@ sorted_by_access_time=$(ls -lt "$folder_path" | awk '{print $9}')
 
 sorted_by_byte_size=$(ls -lS "$folder_path" | awk '{print $9}')
 
-# Anzeigen erstellen
+
 echo "Sortiert nach Dateiname:"
 echo "$sorted_by_filename"
 echo
